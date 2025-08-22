@@ -4,19 +4,19 @@ public class UsingThisAndStatic {
     private String name;
     private int age;
     private int rollNo;
-    private String subject; // fixed naming convention
-    private static int studentCount = 0; // static variable to keep track of the number of students
+    private String subject;
+    private static int studentCount = 0;
 
-    // Constructor
-    public Student(String name, int age, int rollNo, String subject) {
+    
+    public void Student(String name, int age, int rollNo, String subject) {
         this.name = name;
         this.age = age;
         this.rollNo = rollNo;
         this.subject = subject;
-        studentCount++; // increment the static variable each time a new student is created
+        studentCount++; 
     }
 
-    // Getters and Setters
+    
     public String getName() {
         return name;
     }
@@ -45,20 +45,21 @@ public class UsingThisAndStatic {
         this.subject = subject;
     }
 
-    // Method to display info
+
     public void displayStudentInfo() {
         System.out.println("Name: " + name);
         System.out.println("Age: " + age);
         System.out.println("Roll No: " + rollNo);
         System.out.println("Subject: " + subject);
+        System.out.println("Total Students: " + studentCount);
     }
 
-    // Main method for testing
+    
     public static void main(String[] args) {
         Student student = new Student("John Doe", 20, 101, "Computer Science");
         student.displayStudentInfo();
 
-        // Example of using setters
+        
         student.setSubject("Mathematics");
         student.setAge(21);
 
