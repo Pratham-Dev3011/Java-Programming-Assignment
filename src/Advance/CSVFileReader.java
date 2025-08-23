@@ -11,16 +11,16 @@ public class CSVFileReader {
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
 
-            // Read file line by line
+        
             while ((line = br.readLine()) != null) {
-                // Split line by comma
+                
                 String[] values = line.split(",");
 
-                // Print each value
+                
                 for (String value : values) {
                     System.out.print(value.trim() + "  ");
                 }
-                System.out.println(); // move to next line
+                System.out.println();
             }
         } catch (IOException e) {
             e.printStackTrace();
